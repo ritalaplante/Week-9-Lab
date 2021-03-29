@@ -28,15 +28,31 @@ printMatrix(matrix)
 myMatrix = [[1, 2, 3], ["a", "b", "c"], ["red", "yellow", "blue"]]
 
 #print the first list in the myMatrix
+print(myMatrix[0])
 #print the letter 3 using myMatrix
+print(myMatrix[0][2])
 #print the "red" using myMatrix
+print(myMatrix[2][0])
 #print the list of characters using myMatrix
+print(myMatrix[1])
 #change the color yellow in the third list to "purple"
+myMatrix[2][1] = "purple"
+print(myMatrix)
 
 #Create the following matrix using a for loop:
 #[[1, 2, 3]
 # [4, 5, 6]
 # [7, 8, 9]]
+
+matrix = makeMatrixComprehension(3, 3)
+counter = 1
+
+for r in range(0, 3):
+    for c in range(0, 3):
+        matrix[r][c] = counter
+        counter = counter + 1
+
+printMatrix(matrix)
 
 #appending and extending arrays
 colors = [["red", "yellow", "blue"], ["orange", "green", "purple"]]
